@@ -7,10 +7,26 @@ Persistencia de datos: Instancia de MongoDB. \
 Framework de testing: Pytest. \
 Despliegue con Docker y Docker-compose 🐋.
 
+## Estructuración
+La estructura del proyecto está conformada por un grupo de archivos repartidos sebre
+
+Threat-Detectors\
+│   .env\
+│   docker-compose.yml\
+│   mongo-init.js\
+│\
+├───app\
+│   │   app.py\
+│   │   Dockerfile\
+│   │   requirements.txt\
+│\
+└───mongo-volume\
+
+
 ## Instalación y ejecución
 Es necesario tener instalado Docker, para ello dirijase al siguiente link y siga las instrucciones de instalación dependiendo su SO: https://www.docker.com.
 
-## Estructuración
+
 
 
 
