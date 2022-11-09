@@ -27,7 +27,7 @@ Cabe aclarar que la estructura anterior funciona correctamente pero no es la mas
 3. En el fichero raíz debería ir el archivo Docker-compose.yml y ficheros adicionales de configuración como variables de entorno, scripts para inicializar base de datos, etc. 
 Estructura ideal:
 
-Threat-Detectors
+Threat-Detectors\
 │   Infraestructura.png\
 │   docker-compose.yml\
 │   README.md\
