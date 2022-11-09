@@ -21,11 +21,11 @@ Threat-Detectors\
 │\
 └───mongo-volume\
 
-Cabe aclarar que la estructura anterior funciona correctamente pero no es la mas aconsejable. Por convención, buenas práctica y seguir recomendaciones de la documentación se debería estructurar de la siguiente forma:
+Cabe aclarar que la estructura anterior funciona correctamente pero no es la mas aconsejable. Por convención, buenas prácticas y seguir recomendaciones de la documentación se debería estructurar de la siguiente forma:
 1. Un fichero que separe la aplicación principal, agrupando su imagen de Docker y los requirements.txt.
 2. Un fichero que separe los test unitarios de la aplicación principal.
 3. En el fichero raíz debería ir el archivo Docker-compose.yml y ficheros adicionales de configuración como variables de entorno, scripts para inicializar base de datos, etc. 
-Estructura ideal:
+Estructura ideal (en caso de que se quiera implementar no olvidar que se debe de agregar un archivo __init__.py para poder llamar entre directorios las funciones de los archivos .py):
 
 Threat-Detectors\
 │   Infraestructura.png\
