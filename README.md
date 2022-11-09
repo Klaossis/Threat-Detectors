@@ -8,20 +8,37 @@ Framework de testing: Pytest. \
 Despliegue con Docker y Docker-compose 🐋.
 
 ## Estructuración
-La estructura del proyecto está conformada por un grupo de archivos repartidos sebre
+La estructura del proyecto está conformada por un grupo de archivos repartidos sobre el fichero raíz *ThreatDetector*:
 
 Threat-Detectors\
-│   .env\
+│   Dockerfile \
+│   Infraestructura.png \
+│   README.md\
+│   app.py\
 │   docker-compose.yml\
-│   mongo-init.js\
+│   requirements.txt\
+│   test_file.py\
 │\
+└───mongo-volume\
+
+Cabe aclarar que la estructura anterior funciona correctamente pero no es la mas aconsejable. Por convención, buenas práctica y seguir recomendaciones de la documentación se debería estructurar de la siguiente forma:
+1. Un fichero que separe la aplicación principal, agrupando su imagen de Docker y los requirements.txt.
+2. Un fichero que separe los test unitarios de la aplicación principal.
+3. En el fichero raíz debería ir el archivo Docker-compose.yml y ficheros adicionales de configuración como variables de entorno, scripts para inicializar base de datos, etc. 
+Estructura ideal:
+
+Threat-Detectors
+│   Infraestructura.png\
+│   docker-compose.yml\
+│   README.md\
 ├───app\
 │   │   app.py\
 │   │   Dockerfile\
 │   │   requirements.txt\
+├───tests\
+│   │   test_file.py\
 │\
 └───mongo-volume\
-
 
 ## Instalación y ejecución
 Es necesario tener instalado Docker, para ello dirijase al siguiente link y siga las instrucciones de instalación dependiendo su SO: https://www.docker.com.
@@ -30,7 +47,7 @@ Es necesario tener instalado Docker, para ello dirijase al siguiente link y siga
 
 
 
-Copiar el repositorio a su equipo local y estando ubicado en la carpeta principal del protecto (*ThreatDetector*) ejecutar el siguiente comando de docker compose:
+Copiar el repositorio a su equipo local y estando ubicado en la carpeta raíz del protecto (*ThreatDetector*) ejecutar el siguiente comando de docker compose:
 
 ```bash docker-compose up```
 
