@@ -49,15 +49,15 @@ Es necesario tener instalado Docker, para ello dirijase al siguiente link y siga
 
 Copiar el repositorio a su equipo local y estando ubicado en la carpeta raíz del proyecto (*ThreatDetector*) ejecutar el siguiente comando de docker compose:
 
-```bash docker-compose up```
+```docker-compose up```
 
 Esto creara la imagen de la bases de datos y del servidor (basado en Alpine y python), terminada la creación ambos contenedores se ejecutarán, podrá acceder al servidor desde *localhost:3000* y si desea interactuar con la base de datos puede acceder a ella ejecutando el siguiente comando el cual le abrirá una terminal interactica sobre la instancia que se esté ejecutando:
 
-```bash docker-compose exec -it database bash```
+```docker-compose exec -it database bash```
 
 En caso que quiera correr los test unitarios, estando sobre el directorio principal ejecute el siguiente comando:
 
-```bash docker-compose exec -it web pytest test_file.py```
+```docker-compose exec -it web pytest test_file.py```
 
 Mas adelanta se tratará mas a detalle la ejecución de las pruebas unitarias.
 
