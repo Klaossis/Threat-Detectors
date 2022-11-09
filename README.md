@@ -47,7 +47,7 @@ Es necesario tener instalado Docker, para ello dirijase al siguiente link y siga
 
 
 
-Copiar el repositorio a su equipo local y estando ubicado en la carpeta raíz del protecto (*ThreatDetector*) ejecutar el siguiente comando de docker compose:
+Copiar el repositorio a su equipo local y estando ubicado en la carpeta raíz del proyecto (*ThreatDetector*) ejecutar el siguiente comando de docker compose:
 
 ```bash docker-compose up```
 
